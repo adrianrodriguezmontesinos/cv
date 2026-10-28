@@ -1,0 +1,161 @@
+@layer motion {
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-12px) rotate(0.6deg);
+    }
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes tile-pulse {
+    0% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent);
+    }
+    100% {
+      box-shadow: 0 0 0 14px transparent;
+    }
+  }
+
+  .hero__content > *,
+  .hero__actions {
+    animation: rise-in var(--dur-slow) var(--ease-out) backwards;
+  }
+  .hero__content > *:nth-child(1) {
+    animation-delay: 60ms;
+  }
+  .hero__content > *:nth-child(2) {
+    animation-delay: 130ms;
+  }
+  .hero__content > *:nth-child(3) {
+    animation-delay: 200ms;
+  }
+  .hero__content > *:nth-child(4) {
+    animation-delay: 270ms;
+  }
+  .hero__content > *:nth-child(5) {
+    animation-delay: 340ms;
+  }
+  .hero__actions {
+    animation-delay: 410ms;
+  }
+  .hero__art {
+    animation: rise-in 700ms var(--ease-out) 220ms backwards;
+  }
+
+  @supports (animation-timeline: view()) {
+    .section-head,
+    .xp,
+    .study-card,
+    .course-item,
+    .skill-tile,
+    .soft-card,
+    .closing__panel,
+    .project-grid__item {
+      animation: rise-in both var(--ease-out);
+      animation-timeline: view();
+      animation-range: entry 0% entry 32%;
+    }
+
+    .project-grid__item {
+      animation-range: entry 0% entry 45%;
+    }
+  }
+}
+
+@layer motion {
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .hero__img,
+    .hero__ring,
+    .soft-card--time .soft-card__icon img,
+    .soft-card--solving .soft-card__icon img,
+    .skill-tile--feature::before {
+      animation: none !important;
+    }
+
+    .section-head,
+    .xp,
+    .study-card,
+    .course-item,
+    .skill-tile,
+    .soft-card,
+    .closing__panel,
+    .project-grid__item {
+      animation: none !important;
+    }
+  }
+}
+
+@layer motion {
+  @keyframes twinkle {
+    0%,
+    100% {
+      transform: scale(0.72) rotate(-8deg);
+      opacity: 0.45;
+    }
+    50% {
+      transform: scale(1.05) rotate(6deg);
+      opacity: 0.95;
+    }
+  }
+
+  .hero__actions li {
+    animation: rise-in var(--dur-slow) var(--ease-out) backwards;
+  }
+  .hero__actions li:nth-child(1) {
+    animation-delay: 430ms;
+  }
+  .hero__actions li:nth-child(2) {
+    animation-delay: 500ms;
+  }
+  .hero__actions li:nth-child(3) {
+    animation-delay: 570ms;
+  }
+  .hero__actions li:nth-child(4) {
+    animation-delay: 640ms;
+  }
+
+  @supports (animation-timeline: view()) {
+    .blog__panel {
+      animation: rise-in both var(--ease-out);
+      animation-timeline: view();
+      animation-range: entry 0% entry 32%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .blog__panel {
+      animation: none !important;
+    }
+    .section-head__art::before,
+    .blog__panel::before,
+    .mobile-menu::after {
+      animation: none !important;
+    }
+  }
+}

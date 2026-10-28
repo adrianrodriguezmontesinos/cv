@@ -1,0 +1,106 @@
+@layer tokens, base, layout, components, motion;
+
+@layer tokens {
+  :root {
+    --bg: #f5f2e8;
+    --surface: #fffcf5;
+    --surface-2: #ebe8db;
+    --text: #29352b;
+    --text-2: #596459;
+    --cactus: #60734e;
+    --olive: #46583d;
+    --sage: #b7c5a5;
+    --khaki: #a6a184;
+    --brown: #96775d;
+    --terracotta: #c29c7d;
+    --border: #d9d9c9;
+
+    --accent: var(--cactus);
+    --accent-strong: var(--olive);
+    --accent-soft: var(--sage);
+    --on-accent: #fffcf5;
+    --link: var(--olive);
+    --chip-bg: var(--surface-2);
+    --shadow-color: 70 76 55;
+    --shadow-sm:
+      0 1px 2px rgb(var(--shadow-color) / 0.08), 0 2px 8px rgb(var(--shadow-color) / 0.06);
+    --shadow-md:
+      0 2px 6px rgb(var(--shadow-color) / 0.08), 0 10px 24px rgb(var(--shadow-color) / 0.1);
+    --shadow-lg:
+      0 4px 10px rgb(var(--shadow-color) / 0.1), 0 20px 44px rgb(var(--shadow-color) / 0.14);
+    --overlay-tint: linear-gradient(180deg, rgb(41 53 43 / 0) 38%, rgb(41 53 43 / 0.72) 100%);
+
+    --soft-1: #e4ead6;
+    --soft-2: #efebd9;
+    --soft-3: #f3e7d6;
+    --soft-4: #e9e4d2;
+    --soft-5: #dfe7d2;
+    --soft-6: #f0e9dc;
+    --soft-7: #e6e3d4;
+
+    --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+    --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+
+    --fs-eyebrow: 0.78rem;
+    --fs-small: 0.875rem;
+    --fs-body: 1rem;
+    --fs-lead: clamp(1.05rem, 0.98rem + 0.4vw, 1.25rem);
+    --fs-h4: clamp(1.05rem, 1rem + 0.4vw, 1.3rem);
+    --fs-h3: clamp(1.25rem, 1.1rem + 0.8vw, 1.65rem);
+    --fs-h2: clamp(1.9rem, 1.4rem + 2.4vw, 3rem);
+    --fs-hero: clamp(2.6rem, 1.8rem + 4.6vw, 4.6rem);
+
+    --r-sm: 0.625rem;
+    --r-md: 1rem;
+    --r-lg: 1.5rem;
+    --r-xl: 2rem;
+
+    --space-section: clamp(4rem, 3rem + 5vw, 7.5rem);
+    --container: 72rem;
+
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --dur-fast: 160ms;
+    --dur-med: 320ms;
+    --dur-slow: 560ms;
+
+    color-scheme: light;
+  }
+
+  [data-theme='dark'] {
+    --bg: #171f19;
+    --surface: #232d25;
+    --surface-2: #2d382e;
+    --text: #f0ede2;
+    --text-2: #bfc9b8;
+    --sage: #afc493;
+    --olive-acc: #8ea378;
+    --khaki: #c1b99a;
+    --brown: #ba9677;
+    --beige: #ddd1b9;
+    --border: #3e4b3f;
+
+    --accent: var(--sage);
+    --accent-strong: var(--beige);
+    --accent-soft: #42523f;
+    --on-accent: #1b241d;
+    --link: var(--sage);
+    --chip-bg: var(--surface-2);
+    --shadow-color: 0 0 0;
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35), 0 2px 8px rgb(0 0 0 / 0.25);
+    --shadow-md: 0 2px 6px rgb(0 0 0 / 0.35), 0 12px 28px rgb(0 0 0 / 0.32);
+    --shadow-lg: 0 4px 12px rgb(0 0 0 / 0.4), 0 24px 48px rgb(0 0 0 / 0.38);
+    --overlay-tint: linear-gradient(180deg, rgb(15 20 16 / 0) 38%, rgb(15 20 16 / 0.82) 100%);
+
+    --soft-1: #2b382c;
+    --soft-2: #35382c;
+    --soft-3: #383129;
+    --soft-4: #33352b;
+    --soft-5: #29362b;
+    --soft-6: #36332a;
+    --soft-7: #2e352c;
+
+    color-scheme: dark;
+  }
+}

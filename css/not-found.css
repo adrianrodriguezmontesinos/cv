@@ -1,0 +1,139 @@
+@layer components {
+  .not-found {
+    position: relative;
+    min-height: 100svh;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    text-align: center;
+    gap: clamp(1.1rem, 0.9rem + 1vw, 1.6rem);
+    padding: clamp(2.5rem, 6vw, 4.5rem) 1.25rem;
+    overflow: hidden;
+  }
+
+  .not-found__art {
+    position: relative;
+    width: clamp(11rem, 8.5rem + 16vw, 17.5rem);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 46% 54% 52% 48% / 52% 46% 54% 48%;
+    background:
+      radial-gradient(circle at 32% 26%, var(--surface) 0%, transparent 62%), var(--surface-2);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+  }
+  .not-found__art::before {
+    content: '';
+    position: absolute;
+    inset: -0.85rem;
+    border-radius: 48% 52% 54% 46% / 52% 48% 46% 54%;
+    border: 2px dashed color-mix(in srgb, var(--khaki) 75%, transparent);
+    opacity: 0.6;
+    animation: spin 70s linear infinite;
+    pointer-events: none;
+  }
+
+  .not-found__art::after {
+    content: '';
+    position: absolute;
+    inset-block-end: -1.1rem;
+    inset-inline-start: -0.4rem;
+    width: 3.2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-block-start-color: color-mix(in srgb, var(--terracotta) 80%, transparent);
+    border-inline-start-color: color-mix(in srgb, var(--terracotta) 80%, transparent);
+    rotate: 205deg;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  .not-found__art img {
+    width: 84%;
+    filter: drop-shadow(0 8px 14px rgb(var(--shadow-color) / 0.2));
+  }
+
+  .not-found__text {
+    display: grid;
+    gap: 0.75rem;
+    color: var(--text-2);
+    max-width: 52ch;
+    text-wrap: pretty;
+  }
+
+  .not-found__title {
+    font-size: clamp(1.9rem, 1.45rem + 2.6vw, 3.1rem);
+    letter-spacing: -0.02em;
+    max-width: 24ch;
+    position: relative;
+    width: fit-content;
+  }
+
+  .not-found__title::after {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0.04em;
+    inset-block-end: -0.22em;
+    width: 2.4em;
+    height: 0.15em;
+    background: var(--accent);
+    opacity: 0.4;
+    border-radius: 62% 38% 55% 45% / 100% 100% 90% 95%;
+    rotate: -1.2deg;
+  }
+
+  .not-found .ink-star {
+    inset-block-start: 14%;
+    inset-inline-start: 16%;
+    --s: 1.35rem;
+  }
+  .not-found .ink-ring {
+    inset-block-end: 16%;
+    inset-inline-end: 14%;
+    --s: 2.6rem;
+  }
+  .not-found .ink-scallop {
+    inset-block-start: 18%;
+    inset-inline-end: 20%;
+    rotate: -4deg;
+  }
+}
+
+@layer motion {
+  .not-found__art {
+    animation: float 8s ease-in-out infinite;
+  }
+  .not-found__art,
+  .not-found__eyebrow,
+  .not-found__title,
+  .not-found__text,
+  .not-found__art {
+    animation:
+      float 8s ease-in-out infinite,
+      rise-in 700ms var(--ease-out) backwards;
+  }
+  .not-found__eyebrow {
+    animation-delay: 120ms;
+  }
+  .not-found__title {
+    animation-delay: 200ms;
+  }
+  .not-found__text {
+    animation-delay: 290ms;
+  }
+  .not-found__cta {
+    animation: rise-in 700ms var(--ease-out) 380ms backwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .not-found__art,
+    .not-found__eyebrow,
+    .not-found__title,
+    .not-found__text,
+    .not-found__cta,
+    .not-found__art::before {
+      animation: none !important;
+    }
+  }
+}

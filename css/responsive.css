@@ -1,0 +1,86 @@
+@layer components {
+  @media (min-width: 40rem) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .independent__list {
+      grid-template-columns: 1fr 1fr;
+    }
+    .closing__panel {
+      grid-template-columns: auto 1fr;
+    }
+    .blog__panel {
+      grid-template-columns: auto 1fr;
+    }
+  }
+
+  @media (min-width: 40rem) and (max-width: 61.99rem) {
+    .hero__actions {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 62rem) {
+    .hero__grid {
+      grid-template-columns: 1.08fr 0.92fr;
+    }
+    .hero__content {
+      max-width: none;
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .hero__art {
+      order: initial;
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .hero__actions {
+      order: initial;
+      grid-column: 1 / -1;
+      grid-row: 2;
+      grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
+      align-self: start;
+    }
+
+    .timeline {
+      padding-inline-start: 0;
+      gap: 2.75rem;
+    }
+    .timeline::before {
+      inset-inline-start: 11.05rem;
+    }
+    .timeline::after {
+      inset-inline-start: 11.05rem;
+    }
+    .xp {
+      display: grid;
+      grid-template-columns: 9.5rem 1fr;
+      gap: 0 clamp(1.75rem, 1.5rem + 1vw, 2.75rem);
+    }
+    .xp__period {
+      margin-block-start: 0.35rem;
+      text-align: end;
+      line-height: 1.5;
+    }
+    .xp__marker {
+      inset-inline-start: 11.05rem;
+    }
+    .xp__card {
+      grid-column: 2;
+    }
+
+    .project-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .section-head--flip {
+      flex-direction: row-reverse;
+    }
+    .section-head--flip .section-head__text {
+      margin-inline-start: auto;
+      text-align: start;
+    }
+  }
+}

@@ -1,43 +1,31 @@
-# Astro Starter Kit: Minimal
+# CV WEB
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+CV Web developed by Adrian Rodriguez. Showcasing a clean architecture for Vanilla JS project without a framework.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## TECHNOLOGIES
 
-## 🚀 Project Structure
+- HTML
+- CSS
+- JavaScript Vanilla
 
-Inside of your Astro project, you'll see the following folders and files:
+## SEO & Accessibility
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Semantic HTML elements used for better SEO and accessibility
+- ARIA attributes added where necessary for improved accessibility
+- Meta tags for SEO added in the HTML head section
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## OPTIMIZATION
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Images and icons optimized
+  - ≈ 10-30 Kb per image
+  - ≈ 5-10 Kb per icon
+- added lazy loading for a better web performance
 
-Any static assets, like images, can be placed in the `public/` directory.
+## DOCUMENTATION & ARCHITECTURE
 
-## 🧞 Commands
+- Archify documentation used for project structure and component references: https://github.com/tt-a1i/archify
 
-All commands are run from the root of the project, from a terminal:
+## SHOWCASE
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- The project demonstrates a clean architecture for a Vanilla JS web application.
+- But the main reason of the website is a case study for native vanilla components, in order to build a reusable library in Astro.

@@ -1,0 +1,238 @@
+@layer components {
+  .hero {
+    padding-block-start: clamp(2.5rem, 2rem + 3vw, 5rem);
+    overflow: clip;
+  }
+
+  .hero__grid {
+    display: grid;
+    gap: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+    align-items: center;
+  }
+
+  .hero__content {
+    display: grid;
+    gap: clamp(1.1rem, 1rem + 0.6vw, 1.5rem);
+    max-width: 40rem;
+  }
+
+  .hero__eyebrow {
+    margin-block-end: -0.35rem;
+  }
+
+  .hero__title {
+    font-size: var(--fs-hero);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  .hero__role {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 1rem + 1.4vw, 1.8rem);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--accent);
+    margin-block-start: -0.6rem;
+  }
+
+  .hero__about {
+    display: grid;
+    gap: 0.9rem;
+    color: var(--text-2);
+    max-width: 58ch;
+  }
+  .hero__lead {
+    font-size: var(--fs-lead);
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .hero__traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+  .hero__traits span {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text-2);
+  }
+
+  .hero__languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .lang-chip {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.55rem;
+    padding: 0.5rem 0.95rem;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+  .lang-chip__name {
+    font-weight: 650;
+    font-size: var(--fs-small);
+  }
+  .lang-chip__level {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .hero__actions {
+    display: grid;
+    gap: 0.7rem;
+    margin-block-start: 0.35rem;
+    order: 2;
+  }
+  .hero__art {
+    order: 3;
+  }
+
+  .contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.7rem 1.1rem 0.7rem 0.7rem;
+    border-radius: 1.15rem 1.35rem 1.35rem 1.15rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: var(--text);
+    transition:
+      transform var(--dur-fast) var(--ease-out),
+      box-shadow var(--dur-fast) ease,
+      border-color var(--dur-fast) ease;
+  }
+  .contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+  }
+  .contact-btn:active {
+    transform: translateY(-1px) scale(0.99);
+  }
+  button.contact-btn {
+    width: 100%;
+    font: inherit;
+    text-align: start;
+    cursor: pointer;
+  }
+
+  .contact-btn__icon {
+    flex: 0 0 auto;
+    width: 3.1rem;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 0.9rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    transition: background-color var(--dur-fast) ease;
+  }
+  .contact-btn__icon img {
+    width: 78%;
+    transition: transform var(--dur-med) var(--ease-spring);
+  }
+  .contact-btn:hover .contact-btn__icon img {
+    transform: translateY(-2px) rotate(-6deg) scale(1.08);
+  }
+
+  .contact-btn__text {
+    display: grid;
+    line-height: 1.3;
+    min-width: 0;
+  }
+  .contact-btn__label {
+    font-family: var(--font-mono);
+    font-size: var(--fs-eyebrow);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-2);
+  }
+  .contact-btn__value {
+    font-weight: 650;
+    font-size: 0.98rem;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-btn--accent {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+  }
+  .contact-btn--accent .contact-btn__label {
+    color: color-mix(in srgb, var(--on-accent) 75%, transparent);
+  }
+  .contact-btn--accent .contact-btn__icon {
+    background: color-mix(in srgb, var(--on-accent) 16%, transparent);
+    border-color: color-mix(in srgb, var(--on-accent) 30%, transparent);
+  }
+  .contact-btn--accent:hover {
+    border-color: var(--accent-strong);
+  }
+
+  .hero__art {
+    position: relative;
+    justify-self: center;
+    width: min(100%, 30rem);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+  }
+
+  .hero__blob {
+    position: absolute;
+    inset: 4% 2% 8% 6%;
+    border-radius: 46% 54% 58% 42% / 44% 46% 54% 56%;
+    background:
+      radial-gradient(circle at 68% 22%, var(--sage) 0%, transparent 55%),
+      linear-gradient(
+        150deg,
+        var(--surface-2),
+        color-mix(in srgb, var(--sage) 45%, var(--surface-2))
+      );
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero__ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px dashed color-mix(in srgb, var(--accent) 45%, transparent);
+    animation: spin 46s linear infinite;
+  }
+
+  .hero__img {
+    position: relative;
+    width: 86%;
+    filter: drop-shadow(0 18px 28px rgb(var(--shadow-color) / 0.22));
+    animation: float 7s ease-in-out infinite;
+  }
+}
+
+@layer components {
+  .contact-btn__icon--arrow {
+    color: var(--accent-strong);
+    font-size: 1.35rem;
+  }
+  .contact-btn:hover .contact-btn__icon--arrow .css-arrow {
+    transform: translateX(3px);
+  }
+  .contact-btn__icon--arrow .css-arrow {
+    transition: transform var(--dur-fast) var(--ease-out);
+  }
+}

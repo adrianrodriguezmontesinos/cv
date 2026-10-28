@@ -1,0 +1,229 @@
+@layer components {
+  .project-grid {
+    display: grid;
+    gap: clamp(1rem, 0.8rem + 1vw, 1.6rem);
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .project-grid__item {
+    display: flex;
+    min-width: 0;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg) var(--r-lg) var(--r-lg) var(--r-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    isolation: isolate;
+    transition:
+      transform var(--dur-med) var(--ease-out),
+      box-shadow var(--dur-med) ease,
+      border-color var(--dur-med) ease;
+  }
+  .project-grid__item:nth-child(even) .project-card {
+    border-radius: var(--r-sm) var(--r-lg) var(--r-lg) var(--r-lg);
+  }
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+  }
+
+  .project-card__media {
+    position: relative;
+    aspect-ratio: 16 / 7;
+    overflow: hidden;
+    border-block-end: 1px solid var(--border);
+    background: var(--surface-2);
+  }
+
+  .project-card__media::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--terracotta));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur-med) var(--ease-out);
+  }
+  .project-card:hover .project-card__media::after {
+    transform: scaleX(1);
+  }
+  .project-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition:
+      transform var(--dur-slow) var(--ease-out),
+      filter var(--dur-slow) ease;
+  }
+  .project-card:hover .project-card__img {
+    transform: scale(1.07) translateY(-2%);
+    filter: saturate(1.08);
+  }
+
+  .project-card__category {
+    position: absolute;
+    inset-block-start: 0.8rem;
+    inset-inline-start: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.26rem 0.7rem;
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    background: color-mix(in srgb, var(--surface) 82%, transparent);
+    border: 1px solid var(--border);
+    color: var(--text);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition:
+      transform var(--dur-med) var(--ease-spring),
+      background-color var(--dur-fast) ease;
+  }
+  .project-card__category::before {
+    content: '';
+    width: 0.45rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .project-card:hover .project-card__category {
+    transform: translateY(2px) rotate(-2deg);
+  }
+
+  .project-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    flex: 1;
+    padding: clamp(1.1rem, 1rem + 0.8vw, 1.55rem);
+  }
+
+  .project-card__name {
+    font-family: var(--font-display);
+    font-weight: 650;
+    font-size: 1.35rem;
+    letter-spacing: -0.01em;
+    transition: color var(--dur-fast) ease;
+  }
+  .project-card:hover .project-card__name {
+    color: var(--accent-strong);
+  }
+
+  .project-card__desc {
+    display: grid;
+    gap: 0.55rem;
+    color: var(--text-2);
+    font-size: 0.88rem;
+    line-height: 1.62;
+  }
+
+  .project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    padding-block-start: 0.35rem;
+    border-block-start: 1px dashed var(--border);
+  }
+  .project-card__tags li {
+    font-size: 0.74rem;
+    font-weight: 600;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--sage) 22%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--accent-soft) 65%, var(--border));
+    color: var(--text-2);
+    transition:
+      transform var(--dur-fast) var(--ease-spring),
+      border-color var(--dur-fast) ease,
+      color var(--dur-fast) ease,
+      background-color var(--dur-fast) ease;
+  }
+  [data-theme='dark'] .project-card__tags li {
+    background: color-mix(in srgb, var(--accent-soft) 30%, var(--surface));
+  }
+  .project-card:hover .project-card__tags li {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    color: var(--accent-strong);
+  }
+  .project-card:hover .project-card__tags li:nth-child(2) {
+    transition-delay: 35ms;
+  }
+  .project-card:hover .project-card__tags li:nth-child(3) {
+    transition-delay: 70ms;
+  }
+  .project-card:hover .project-card__tags li:nth-child(4) {
+    transition-delay: 105ms;
+  }
+  .project-card:hover .project-card__tags li:nth-child(5) {
+    transition-delay: 140ms;
+  }
+  .project-card:hover .project-card__tags li:nth-child(6) {
+    transition-delay: 175ms;
+  }
+
+  .project-card__cta {
+    position: relative;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-block-start: auto;
+    padding: 0.62rem 1.15rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: 650;
+    font-size: 0.88rem;
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition:
+      transform var(--dur-fast) var(--ease-out),
+      box-shadow var(--dur-fast) ease;
+  }
+
+  .project-card__cta::after {
+    content: '';
+    position: absolute;
+    inset-block: 0;
+    left: -75%;
+    width: 45%;
+    background: linear-gradient(105deg, transparent, rgb(255 255 255 / 0.38), transparent);
+    transform: skewX(-18deg);
+    transition: left 0.55s ease;
+  }
+  .project-card__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .project-card__cta:hover::after {
+    left: 135%;
+  }
+  .project-card__cta:active {
+    transform: translateY(0) scale(0.98);
+  }
+  .project-card__cta {
+    transition: transform var(--dur-fast) var(--ease-out);
+  }
+  .project-card__cta:hover {
+    transform: translateX(4px);
+  }
+}

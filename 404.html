@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found — Adrián Rodríguez</title>
+    <link rel="icon" type="image/webp" href="assets/icons/account.webp" />
+    <meta
+      name="description"
+      content="This page is still under construction. Head back to the portfolio of Adrián Rodríguez, Software Developer & Tech Lead."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="noindex" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/academic.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/closing.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="css/cv-modal.css" />
+    <link rel="stylesheet" href="css/decorations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/motion.css" />
+    <link rel="stylesheet" href="css/not-found.css" />
+    <link rel="stylesheet" href="css/project-page.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- #region Not found -->
+    <main class="not-found" id="main">
+      <span class="ink ink-star" aria-hidden="true"></span>
+      <span class="ink ink-ring" aria-hidden="true"></span>
+      <span class="ink ink-scallop" aria-hidden="true"></span>
+
+      <div class="not-found__art">
+        <img
+          src="assets/images/developing.webp"
+          alt="Illustration of a developer crafting a page that is still under construction"
+          width="450"
+          height="450"
+          fetchpriority="high"
+        />
+      </div>
+
+      <p class="eyebrow not-found__eyebrow">404 · Under construction</p>
+      <h1 class="not-found__title">Something awesome is in the works!</h1>
+
+      <div class="not-found__text">
+        <p>
+          We're currently working on this page, crafting something exciting and making sure every
+          detail is just right.
+        </p>
+        <p>We hope to have everything ready as soon as possible. Thanks for your patience!</p>
+      </div>
+
+      <a class="project-nav-btn not-found__cta" href="index.html">
+        <img
+          class="project-nav-btn__icon"
+          src="assets/icons/arrow_left.webp"
+          alt=""
+          width="150"
+          height="114"
+          decoding="async"
+        />
+        Back to Home
+      </a>
+    </main>
+    <!-- #endregion Not found -->
+  </body>
+</html>

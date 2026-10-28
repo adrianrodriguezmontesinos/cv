@@ -1,0 +1,2034 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adrián Rodríguez — Software Developer &amp; Tech Lead</title>
+    <link rel="icon" type="image/webp" href="assets/icons/account.webp" />
+    <meta
+      name="description"
+      content="Portfolio and CV of Adrián Rodríguez, Software Developer & Tech Lead. Cross-platform web applications, Angular architecture, accessibility and native web craftsmanship."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/academic.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/closing.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="css/cv-modal.css" />
+    <link rel="stylesheet" href="css/decorations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/motion.css" />
+    <link rel="stylesheet" href="css/not-found.css" />
+    <link rel="stylesheet" href="css/project-page.css" />
+    <script src="theme.js" defer></script>
+    <script src="menu.js" defer></script>
+    <script src="cv-modal.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- #region Site header -->
+    <header class="site-header">
+      <div class="site-header__inner container">
+        <a class="brand" href="#top">
+          <span class="brand__name">Adrián Rodríguez</span>
+          <span class="brand__role">Software Developer &amp; Tech Lead</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#experience">Experience</a></li>
+            <li><a class="nav__link" href="#projects">Projects</a></li>
+            <li><a class="nav__link" href="#academic">Academic</a></li>
+            <li><a class="nav__link" href="#skills">Skills</a></li>
+            <li>
+              <a
+                class="nav__link nav__link--external"
+                href="https://codeawapps.com/blog"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Blog<span class="nav__external" aria-hidden="true">↗</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          class="theme-switch"
+          type="button"
+          aria-pressed="false"
+          aria-label="Switch to dark theme"
+          data-theme-switch
+        >
+          <span class="theme-switch__track" aria-hidden="true">
+            <span class="theme-switch__icon theme-switch__icon--light">
+              <img src="assets/icons/light.webp" alt="" width="150" height="150" decoding="async" />
+            </span>
+            <span class="theme-switch__icon theme-switch__icon--dark">
+              <img src="assets/icons/dark.webp" alt="" width="150" height="150" decoding="async" />
+            </span>
+            <span class="theme-switch__thumb"></span>
+          </span>
+        </button>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+          data-menu-toggle
+        >
+          <span class="menu-toggle__bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" data-mobile-menu>
+      <ul class="mobile-menu__list">
+        <li style="--i: 0">
+          <a class="mobile-menu__link" href="#experience">
+            <span class="mobile-menu__index" aria-hidden="true">01</span>
+            <span class="mobile-menu__name">Experience</span>
+          </a>
+        </li>
+        <li style="--i: 1">
+          <a class="mobile-menu__link" href="#projects">
+            <span class="mobile-menu__index" aria-hidden="true">02</span>
+            <span class="mobile-menu__name">Projects</span>
+          </a>
+        </li>
+        <li style="--i: 2">
+          <a class="mobile-menu__link" href="#academic">
+            <span class="mobile-menu__index" aria-hidden="true">03</span>
+            <span class="mobile-menu__name">Academic</span>
+          </a>
+        </li>
+        <li style="--i: 3">
+          <a class="mobile-menu__link" href="#skills">
+            <span class="mobile-menu__index" aria-hidden="true">04</span>
+            <span class="mobile-menu__name">Skills</span>
+          </a>
+        </li>
+        <li style="--i: 4">
+          <a
+            class="mobile-menu__link"
+            href="https://codeawapps.com/blog"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="mobile-menu__index" aria-hidden="true">05</span>
+            <span class="mobile-menu__name">Blog</span>
+            <span class="mobile-menu__external" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+      <p class="mobile-menu__note">Adrián Rodríguez · Madrid, Spain</p>
+    </nav>
+    <!-- #endregion Site header -->
+
+    <main id="main">
+      <!-- #region Hero -->
+      <section class="hero section" id="about" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow hero__eyebrow">Portfolio &amp; CV · Madrid, Spain</p>
+            <h1 class="hero__title" id="hero-title">Adrián Rodríguez</h1>
+            <p class="hero__role">
+              Software Developer
+              <span class="hero__role-amp">&amp;</span> Tech&nbsp;Lead
+            </p>
+
+            <div class="hero__about">
+              <p class="hero__lead">
+                New technologies enthusiast, with a strong focus on designing and developing
+                cross-platform web applications and video games.
+              </p>
+              <p>
+                Recently, I've been working on large-scale projects using the latest versions of
+                Angular, leveraging micro frontends and building dynamic, reusable libraries to
+                improve development efficiency and scalability.
+              </p>
+              <p class="hero__traits">
+                <span>Proactive</span><span>Creative</span><span>Self-taught</span
+                ><span>Solution-oriented</span>
+              </p>
+            </div>
+
+            <ul class="hero__languages" aria-label="Languages">
+              <li class="lang-chip">
+                <span class="lang-chip__name">Spanish</span>
+                <span class="lang-chip__level">Native</span>
+              </li>
+              <li class="lang-chip">
+                <span class="lang-chip__name">English</span>
+                <span class="lang-chip__level">C1</span>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="hero__actions" aria-label="Contact and profile links">
+            <li>
+              <a
+                class="contact-btn"
+                href="https://github.com/adrianrodriguezmontesinos"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="contact-btn__icon">
+                  <img
+                    src="assets/icons/github.webp"
+                    alt=""
+                    width="150"
+                    height="150"
+                    decoding="async"
+                  />
+                </span>
+                <span class="contact-btn__text">
+                  <span class="contact-btn__label">GitHub</span>
+                  <span class="contact-btn__value">adrianrodriguezmontesinos</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-btn" href="#projects">
+                <span class="contact-btn__icon contact-btn__icon--arrow">
+                  <img
+                    src="assets/icons/see.webp"
+                    alt=""
+                    width="150"
+                    height="150"
+                    decoding="async"
+                  />
+                </span>
+                <span class="contact-btn__text">
+                  <span class="contact-btn__label">Portfolio</span>
+                  <span class="contact-btn__value">See projects</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="contact-btn"
+                href="https://www.google.com/maps/search/?api=1&amp;query=Madrid%2C+Spain"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="contact-btn__icon">
+                  <img
+                    src="assets/icons/marker.webp"
+                    alt=""
+                    width="150"
+                    height="150"
+                    decoding="async"
+                  />
+                </span>
+                <span class="contact-btn__text">
+                  <span class="contact-btn__label">Location</span>
+                  <span class="contact-btn__value">Madrid, Spain</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <button class="contact-btn contact-btn--accent" type="button" data-cv-open>
+                <span class="contact-btn__icon">
+                  <img
+                    src="assets/icons/download.webp"
+                    alt=""
+                    width="150"
+                    height="150"
+                    decoding="async"
+                  />
+                </span>
+                <span class="contact-btn__text">
+                  <span class="contact-btn__label">Resume</span>
+                  <span class="contact-btn__value">Download CV</span>
+                </span>
+              </button>
+            </li>
+          </ul>
+
+          <div class="hero__art" aria-hidden="true">
+            <div class="hero__blob"></div>
+            <img
+              class="hero__img"
+              src="assets/images/programmer.webp"
+              alt=""
+              width="500"
+              height="500"
+              fetchpriority="high"
+              decoding="async"
+            />
+            <div class="hero__ring"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- #endregion Hero -->
+
+      <!-- #region Work experience -->
+      <section class="section experience" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <header class="section-head">
+            <span class="ink ink-star" aria-hidden="true"></span>
+            <div class="section-head__art" aria-hidden="true">
+              <img
+                src="assets/images/work.webp"
+                alt=""
+                width="350"
+                height="350"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="section-head__text">
+              <p class="eyebrow">Career path</p>
+              <h2 class="section-title" id="experience-title">Work Experience</h2>
+              <p class="section-lead">
+                Nine years building web applications across insurance, transport and education —
+                from full stack development to frontend architecture and technical leadership.
+              </p>
+            </div>
+          </header>
+
+          <!-- #region Professional experience -->
+          <h3 class="subsection-title" id="professional-exp">
+            <span class="subsection-title__index">01</span> Professional Experience
+          </h3>
+
+          <ol class="timeline" aria-labelledby="professional-exp">
+            <li class="xp">
+              <div class="xp__marker" aria-hidden="true"></div>
+              <p class="xp__period">
+                <time datetime="2025-02">Feb 2025</time> –
+                <time datetime="2026-07">Jul 2026</time>
+              </p>
+              <article class="xp__card">
+                <header class="xp__header">
+                  <h4 class="xp__role">Senior Front End Developer &amp; Software Architect</h4>
+                  <p class="xp__org">
+                    <span class="xp__company">Entelgy</span>
+                    <span class="xp__client">Client: Admiral Seguros</span>
+                    <span class="chip chip--sector">Insurance</span>
+                  </p>
+                </header>
+                <ul class="xp__achievements">
+                  <li>
+                    Designed and delivered a security-focused access control application, owning the
+                    full lifecycle end-to-end, including image optimization and lazy-loaded screens.
+                  </li>
+                  <li>
+                    Led the development of features across microservices, ensuring adherence to
+                    hexagonal architecture principles and clean code best practices.
+                  </li>
+                  <li>
+                    Implemented dynamic routing and role-based access control, along with secure
+                    authentication and authorization using OIDC, tokens and interceptors.
+                  </li>
+                  <li>Built custom Redux-inspired state management using Angular Signals.</li>
+                  <li>
+                    Leveraged Angular lifecycle features, routing, guards, lazy loading and hooks.
+                  </li>
+                  <li>
+                    Built interfaces with Angular, PrimeNG and Tailwind, and created dynamic theming
+                    systems based on Figma designs loaded through JSON.
+                  </li>
+                  <li>
+                    Created dynamic reactive forms using JSON configurations and Formly, leveraging
+                    a zoneless approach for performance.
+                  </li>
+                  <li>
+                    Ensured accessibility compliance using automated and manual auditing tools, WCAG
+                    2.1 A/AA standards, semantic HTML, ARIA roles and keyboard navigation.
+                  </li>
+                  <li>Managed client communication using Jira and Confluence.</li>
+                </ul>
+                <dl class="tech-groups">
+                  <div class="tech-group">
+                    <dt>Frontend</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Angular 12–20</li>
+                        <li>AngularJS</li>
+                        <li>PrimeNG</li>
+                        <li>Signals</li>
+                        <li>Formly</li>
+                        <li>Tailwind</li>
+                        <li>SCSS</li>
+                        <li>TypeScript</li>
+                        <li>JavaScript</li>
+                        <li>NgRx</li>
+                        <li>RxJS</li>
+                        <li>Hexagonal Architecture</li>
+                        <li>Angular migrations</li>
+                        <li>npm</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>Backend</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Java</li>
+                        <li>SpringBoot</li>
+                        <li>JUnit</li>
+                        <li>Mockito</li>
+                        <li>PostgreSQL</li>
+                        <li>Kafka</li>
+                        <li>Hexagonal Architecture</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>DevOps</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>CI/CD</li>
+                        <li>Jenkins</li>
+                        <li>Nexus</li>
+                        <li>Grafana</li>
+                        <li>Postman</li>
+                        <li>AWS</li>
+                        <li>DBeaver</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>QA</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Selenium</li>
+                        <li>Storybook</li>
+                        <li>Playwright</li>
+                        <li>Integration testing</li>
+                        <li>Unit testing</li>
+                        <li>Performance testing</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>Management &amp; AI</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Scrum</li>
+                        <li>SAFe</li>
+                        <li>Jira</li>
+                        <li>Notion</li>
+                        <li>Confluence</li>
+                        <li>GitHub Copilot</li>
+                        <li>Gemini</li>
+                      </ul>
+                    </dd>
+                  </div>
+                </dl>
+              </article>
+            </li>
+
+            <li class="xp">
+              <div class="xp__marker" aria-hidden="true"></div>
+              <p class="xp__period">
+                <time datetime="2024-08">Aug 2024</time> –
+                <time datetime="2024-12">Dec 2024</time>
+              </p>
+              <article class="xp__card">
+                <header class="xp__header">
+                  <h4 class="xp__role">Senior Front End Developer &amp; Tech Leader</h4>
+                  <p class="xp__org">
+                    <span class="xp__company">Plexus Tech</span>
+                    <span class="xp__client">Client: Iberia</span>
+                    <span class="chip chip--sector">Transport</span>
+                  </p>
+                </header>
+                <ul class="xp__achievements">
+                  <li>
+                    Translated business requirements into technical specifications (DRD → DLD).
+                  </li>
+                  <li>Ensured accessibility compliance with WCAG A/AA, a11y and WAI-ARIA.</li>
+                  <li>Designed Hexagonal Architecture for scalable applications.</li>
+                  <li>
+                    Managed state with NgRx Signals and Entities, leveraging the Observer pattern.
+                  </li>
+                  <li>
+                    Developed mobile applications with Ionic and native Kotlin/Swift integrations.
+                  </li>
+                  <li>
+                    Built advanced data tables with filtering, sorting and infinite scrolling using
+                    PrimeNG.
+                  </li>
+                  <li>
+                    Applied reactive programming to optimize performance and change detection.
+                  </li>
+                </ul>
+                <dl class="tech-groups">
+                  <div class="tech-group">
+                    <dt>Frontend</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Angular 16–18</li>
+                        <li>PrimeNG</li>
+                        <li>Signals</li>
+                        <li>Angular Material</li>
+                        <li>SCSS</li>
+                        <li>TypeScript</li>
+                        <li>NgRx</li>
+                        <li>RxJS</li>
+                        <li>Hexagonal Architecture</li>
+                        <li>Ionic</li>
+                        <li>Nx</li>
+                        <li>Yarn</li>
+                        <li>npm</li>
+                        <li>pnpm</li>
+                        <li>Jest</li>
+                        <li>ng-mocks</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>DevOps &amp; QA</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>SonarQube</li>
+                        <li>Jenkins</li>
+                        <li>Docker</li>
+                        <li>Nexus</li>
+                        <li>Cypress</li>
+                        <li>Unit testing</li>
+                        <li>Integration testing</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>Management</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Scrum</li>
+                        <li>Confluence</li>
+                        <li>Trello</li>
+                        <li>Jira</li>
+                      </ul>
+                    </dd>
+                  </div>
+                </dl>
+              </article>
+            </li>
+
+            <li class="xp">
+              <div class="xp__marker" aria-hidden="true"></div>
+              <p class="xp__period">
+                <time datetime="2023-09">Sep 2023</time> –
+                <time datetime="2024-07">Jul 2024</time>
+              </p>
+              <article class="xp__card">
+                <header class="xp__header">
+                  <h4 class="xp__role">Senior Front End Developer &amp; Project Manager</h4>
+                  <p class="xp__org">
+                    <span class="xp__company">T-Systems</span>
+                    <span class="xp__client">Client: Allianz</span>
+                    <span class="chip chip--sector">Insurance</span>
+                  </p>
+                </header>
+                <ul class="xp__achievements">
+                  <li>
+                    Analyzed requirements and produced technical documentation for frontend and
+                    backend solutions.
+                  </li>
+                  <li>
+                    Estimated, modularized and coordinated task delivery, ensuring clear
+                    communication across the team.
+                  </li>
+                  <li>
+                    Led frontend architecture using Micro Frontends and Module Federation, including
+                    Angular migrations.
+                  </li>
+                  <li>
+                    Designed database models and ensured data integrity and security across multiple
+                    entry points.
+                  </li>
+                  <li>
+                    Built reusable, scalable solutions: multi-dependency forms, services, components
+                    and internal libraries using SCSS, BEM and DRY principles.
+                  </li>
+                  <li>
+                    Optimized large data handling, multi-megabyte payloads and complex object
+                    mapping.
+                  </li>
+                  <li>Enforced SOLID principles, modularization, clean code and secure coding.</li>
+                  <li>Mentored the development team in Angular best practices.</li>
+                  <li>
+                    Managed Micro Frontend entry points with appropriate authorization and access
+                    control.
+                  </li>
+                  <li>
+                    Developed advanced testing strategies using unit tests and mocks, collaborating
+                    closely with QA and occasionally taking ownership of testing processes.
+                  </li>
+                </ul>
+                <dl class="tech-groups">
+                  <div class="tech-group">
+                    <dt>Frontend</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Angular 15–18</li>
+                        <li>Module Federation</li>
+                        <li>Angular Material</li>
+                        <li>Ionic</li>
+                        <li>SCSS</li>
+                        <li>TypeScript</li>
+                        <li>Redux</li>
+                        <li>Nebular</li>
+                        <li>RxJS</li>
+                        <li>Micro Frontends</li>
+                        <li>npm</li>
+                        <li>InVision</li>
+                        <li>Karma</li>
+                        <li>Jasmine</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>Backend</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Spring Boot 2–3</li>
+                        <li>Java 8/11/17</li>
+                        <li>DDD</li>
+                        <li>PostgreSQL</li>
+                        <li>Postman</li>
+                        <li>Swagger</li>
+                        <li>DB Visualizer</li>
+                        <li>OAuth2</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>Management</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Scrum</li>
+                        <li>Confluence</li>
+                        <li>Trello</li>
+                        <li>Jira</li>
+                        <li>SonarQube</li>
+                        <li>Jenkins</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>DevOps</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Azure DevOps</li>
+                        <li>Lighthouse</li>
+                        <li>Checkmarx</li>
+                      </ul>
+                    </dd>
+                  </div>
+                </dl>
+              </article>
+            </li>
+
+            <li class="xp">
+              <div class="xp__marker" aria-hidden="true"></div>
+              <p class="xp__period">
+                <time datetime="2022-03">Mar 2022</time> –
+                <time datetime="2023-07">Jul 2023</time>
+              </p>
+              <article class="xp__card">
+                <header class="xp__header">
+                  <h4 class="xp__role">Senior Front End Developer &amp; Software Analyst</h4>
+                  <p class="xp__org">
+                    <span class="xp__company">Proeduca</span>
+                    <span class="chip chip--sector">Education</span>
+                  </p>
+                </header>
+                <dl class="tech-groups">
+                  <div class="tech-group">
+                    <dt>Frontend</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Angular 9–15</li>
+                        <li>SCSS</li>
+                        <li>TypeScript</li>
+                        <li>RxJS</li>
+                        <li>Angular Material</li>
+                        <li>PrimeNG</li>
+                        <li>ng-bootstrap</li>
+                        <li>Redux</li>
+                        <li>Micro Frontends</li>
+                        <li>npm</li>
+                        <li>Figma</li>
+                        <li>Karma</li>
+                        <li>Jasmine</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>Backend</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>.NET</li>
+                        <li>C#</li>
+                        <li>SQL Server</li>
+                        <li>Postman</li>
+                        <li>Swagger</li>
+                        <li>SQLDBM</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>DevOps</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Scrum</li>
+                        <li>Azure DevOps</li>
+                        <li>Lighthouse</li>
+                        <li>Checkmarx</li>
+                      </ul>
+                    </dd>
+                  </div>
+                </dl>
+              </article>
+            </li>
+
+            <li class="xp">
+              <div class="xp__marker" aria-hidden="true"></div>
+              <p class="xp__period">
+                <time datetime="2017-09">Sep 2017</time> –
+                <time datetime="2021-12">Dec 2021</time>
+              </p>
+              <article class="xp__card">
+                <header class="xp__header">
+                  <h4 class="xp__role">Full Stack Developer</h4>
+                  <p class="xp__org">
+                    <span class="xp__company">iCloud Software Facility Management</span>
+                  </p>
+                </header>
+                <dl class="tech-groups">
+                  <div class="tech-group">
+                    <dt>Frontend</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Android</li>
+                        <li>Ionic</li>
+                        <li>Vanilla JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>Angular 8–11</li>
+                        <li>Adobe XD</li>
+                        <li>React</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>Backend</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Java 8/11/17</li>
+                        <li>MySQL</li>
+                        <li>Spring Boot</li>
+                        <li>REST APIs</li>
+                        <li>Node.js</li>
+                        <li>Gradle</li>
+                        <li>Maven</li>
+                        <li>PL/SQL</li>
+                        <li>JPA</li>
+                        <li>Hibernate</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="tech-group">
+                    <dt>DevOps</dt>
+                    <dd>
+                      <ul class="pill-list">
+                        <li>Scrum</li>
+                        <li>Jira</li>
+                        <li>Docker</li>
+                        <li>Jenkins</li>
+                      </ul>
+                    </dd>
+                  </div>
+                </dl>
+              </article>
+            </li>
+          </ol>
+
+          <!-- #endregion Professional experience -->
+
+          <!-- #region Independent experience -->
+          <div class="independent">
+            <h3 class="subsection-title subsection-title--alt" id="independent-exp">
+              <span class="subsection-title__index">02</span> Independent Experience
+            </h3>
+
+            <ol class="independent__list" aria-labelledby="independent-exp">
+              <li>
+                <article class="xp__card xp__card--indie">
+                  <header class="xp__header">
+                    <p class="xp__period xp__period--inline">
+                      <time datetime="2024">2024</time> – Present
+                    </p>
+                    <h4 class="xp__role">Tech Lead</h4>
+                    <p class="xp__org">
+                      <span class="xp__company">Code Aw Apps</span>
+                      <span class="chip chip--indie">Independent</span>
+                    </p>
+                  </header>
+                  <dl class="tech-groups">
+                    <div class="tech-group">
+                      <dt>Frontend</dt>
+                      <dd>
+                        <ul class="pill-list">
+                          <li>Angular 16–22</li>
+                          <li>Signals API</li>
+                          <li>Zoneless</li>
+                          <li>PrimeNG</li>
+                          <li>Angular Material</li>
+                          <li>SCSS</li>
+                          <li>TypeScript</li>
+                          <li>NgRx</li>
+                          <li>RxJS</li>
+                          <li>Clean Architecture</li>
+                          <li>Bun</li>
+                          <li>Bit</li>
+                          <li>Biome</li>
+                          <li>Ionic</li>
+                          <li>Mobile First</li>
+                          <li>React</li>
+                          <li>Preact</li>
+                          <li>React Native</li>
+                          <li>Flutter</li>
+                          <li>Kotlin</li>
+                          <li>Astro</li>
+                          <li>Vitest</li>
+                          <li>Three.js</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="tech-group">
+                      <dt>Backend</dt>
+                      <dd>
+                        <ul class="pill-list">
+                          <li>Node.js</li>
+                          <li>Express.js</li>
+                          <li>Fastify</li>
+                          <li>Java</li>
+                          <li>Spring Boot</li>
+                          <li>.NET</li>
+                          <li>SQL</li>
+                          <li>PostgreSQL</li>
+                          <li>CORS</li>
+                          <li>Python</li>
+                          <li>Nginx</li>
+                          <li>p2m</li>
+                          <li>MongoDB</li>
+                          <li>OAuth</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="tech-group">
+                      <dt>DevOps &amp; Management</dt>
+                      <dd>
+                        <ul class="pill-list">
+                          <li>CI/CD</li>
+                          <li>Scrum</li>
+                          <li>Jira</li>
+                          <li>Cloudflare</li>
+                          <li>Docker</li>
+                          <li>Podman</li>
+                          <li>YouTrack</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="tech-group">
+                      <dt>AI</dt>
+                      <dd>
+                        <ul class="pill-list">
+                          <li>OpenCode</li>
+                          <li>Claude Code</li>
+                          <li>Kimi Code</li>
+                          <li>GitHub Copilot</li>
+                          <li>Ollama</li>
+                          <li>LM Studio</li>
+                        </ul>
+                      </dd>
+                    </div>
+                  </dl>
+                </article>
+              </li>
+              <li>
+                <article class="xp__card xp__card--indie">
+                  <header class="xp__header">
+                    <p class="xp__period xp__period--inline">
+                      <time datetime="2017">2017</time> –
+                      <time datetime="2024">2024</time>
+                    </p>
+                    <h4 class="xp__role">Software Developer</h4>
+                    <p class="xp__org">
+                      <span class="xp__company">Freelance</span>
+                      <span class="chip chip--indie">Independent</span>
+                    </p>
+                  </header>
+                  <dl class="tech-groups">
+                    <div class="tech-group">
+                      <dt>Technologies</dt>
+                      <dd>
+                        <ul class="pill-list">
+                          <li>Angular</li>
+                          <li>TypeScript</li>
+                          <li>SCSS</li>
+                          <li>NestJS</li>
+                          <li>Java</li>
+                          <li>Kotlin</li>
+                          <li>C#</li>
+                          <li>C/C++</li>
+                          <li>Spring Boot</li>
+                          <li>REST APIs</li>
+                          <li>Figma</li>
+                          <li>SQL</li>
+                          <li>Canvas</li>
+                          <li>Jira</li>
+                          <li>Trello</li>
+                          <li>Jenkins</li>
+                          <li>Bootstrap</li>
+                        </ul>
+                      </dd>
+                    </div>
+                  </dl>
+                </article>
+              </li>
+            </ol>
+            <!-- #endregion Independent experience -->
+          </div>
+        </div>
+      </section>
+
+      <!-- #endregion Work experience -->
+
+      <!-- #region Projects -->
+      <section class="section projects" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <header class="section-head section-head--flip">
+            <span class="ink ink-ring" aria-hidden="true"></span>
+            <span class="ink ink-scallop" aria-hidden="true"></span>
+            <div class="section-head__art" aria-hidden="true">
+              <img
+                src="assets/images/projects.webp"
+                alt="IA Mango"
+                width="350"
+                height="292"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="section-head__text">
+              <p class="eyebrow">Selected work</p>
+              <h2 class="section-title" id="projects-title">Independent Projects</h2>
+              <p class="section-lead">
+                Independent projects in which I have been working on or I am currently working.
+              </p>
+            </div>
+          </header>
+
+          <ul class="project-grid">
+            <li class="project-grid__item project-grid__item">
+              <article class="project-card">
+                <div class="project-card__media">
+                  <img
+                    class="project-card__img"
+                    src="assets/images/ia-mango.webp"
+                    alt="IA Mango"
+                    width="900"
+                    height="488"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-card__category">Project Manager</span>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__name">IA Mango</h3>
+                  <div class="project-card__desc">
+                    <p>
+                      Private LLM infrastructure and customized AI chatbots with MCP-powered agents,
+                      automated workflows, and custom skills.
+                    </p>
+                    <p>
+                      NestJS backend supporting LLM integrations, document processing, file
+                      generation, and model fine-tuning.
+                    </p>
+                    <p>
+                      AI monitoring with token tracking, cost optimization, performance analysis,
+                      and continuous model improvements.
+                    </p>
+                    <p>
+                      Scalable Nx monorepo architecture with Docker containerization and Nginx
+                      reverse proxy.
+                    </p>
+                  </div>
+                  <ul class="project-card__tags" aria-label="Technologies used in Project 01">
+                    <li>AWS</li>
+                    <li>Angular</li>
+                    <li>Docker</li>
+                    <li>Ollama</li>
+                    <li>NgInx</li>
+                    <li>n8n</li>
+                    <li>MPC</li>
+                  </ul>
+                  <a
+                    class="project-card__cta"
+                    href="https://iamango.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>See project</span>
+                    <img
+                      src="assets/icons/web.webp"
+                      alt=""
+                      width="40"
+                      height="40"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="project-grid__item">
+              <article class="project-card">
+                <div class="project-card__media">
+                  <img
+                    class="project-card__img"
+                    src="assets/images/math-nano.webp"
+                    alt="Math Nano"
+                    width="600"
+                    height="345"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-card__category">Tech Lead</span>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__name">Math Nano</h3>
+                  <div class="project-card__desc">
+                    <p>
+                      Desktop app built with React 19 and Electron for creating math teaching
+                      materials. Vite powers the development workflow, while Tailwind CSS handles
+                      styling.
+                    </p>
+                    <p>
+                      Educational content is written in Markdown, with mathematical notation
+                      rendered using KaTeX. function-plot and JSXGraph provide function plots and
+                      interactive geometry.
+                    </p>
+                    <p>
+                      html2canvas and jsPDF enable worksheet export to PDF. Documentation is built
+                      with Astro and Starlight.
+                    </p>
+                  </div>
+                  <ul class="project-card__tags" aria-label="Technologies used in Project 02">
+                    <li>Electron</li>
+                    <li>TypeScript</li>
+                    <li>Vite</li>
+                    <li>eCharts</li>
+                    <li>SCSS</li>
+                  </ul>
+                  <a
+                    class="project-card__cta"
+                    href="404.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>See project</span>
+                    <img
+                      src="assets/icons/web.webp"
+                      alt=""
+                      width="40"
+                      height="40"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="project-grid__item">
+              <article class="project-card">
+                <div class="project-card__media">
+                  <img
+                    class="project-card__img"
+                    src="assets/images/landing-code.webp"
+                    alt="Code Aw Apps"
+                    width="800"
+                    height="570"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-card__category">Tech Lead</span>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__name">Landing Code Aw Apps</h3>
+                  <div class="project-card__desc">
+                    <p>
+                      A landing page built with vanilla JavaScript. Powered by Three.js and Lenis
+                      for cinematic visuals and smooth scrolling.
+                    </p>
+                    <p>
+                      Featuring a custom-built system for processing and managing website posts.
+                      Using recursive DOM traversal to find and handle elements.
+                    </p>
+                    <p>Designed for an immersive and personalized browsing experience.</p>
+                  </div>
+                  <ul class="project-card__tags" aria-label="Technologies used in Project 03">
+                    <li>ThreeJS</li>
+                    <li>Levis</li>
+                    <li>JavaScript</li>
+                    <li>CSS</li>
+                    <li>HTML</li>
+                  </ul>
+                  <a
+                    class="project-card__cta"
+                    href="https://codeawapps.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>See project</span>
+
+                    <img
+                      src="assets/icons/web.webp"
+                      alt=""
+                      width="40"
+                      height="40"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="project-grid__item">
+              <article class="project-card">
+                <div class="project-card__media">
+                  <img
+                    class="project-card__img"
+                    src="assets/images/audio-plugins/audio-plugins_1.webp"
+                    alt="Code Aw Audio Plugins"
+                    width="800"
+                    height="570"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-card__category">Project Manager</span>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__name">Code Aw Audio Plugins</h3>
+                  <div class="project-card__desc">
+                    <p>Audio plugins built with C++ and iPlug.</p>
+                    <p>Featuring guitar amplifiers, pedalboards, FX, and drum instruments.</p>
+                    <p>Combining audio processing with intuitive interface design.</p>
+                  </div>
+                  <ul class="project-card__tags" aria-label="Technologies used in Project 04">
+                    <li>C++</li>
+                    <li>iPlug</li>
+                    <li>SVG</li>
+                    <li>MIDI</li>
+                    <li>VST3</li>
+                  </ul>
+                  <a class="project-card__cta" href="project/audio-plugins/index.html">
+                    <span>See project</span>
+                    <img
+                      src="assets/icons/see.webp"
+                      alt=""
+                      width="40"
+                      height="40"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="project-grid__item project-grid__item">
+              <article class="project-card">
+                <div class="project-card__media">
+                  <img
+                    class="project-card__img"
+                    src="assets/images/landing-audio.webp"
+                    alt="Landing Code Aw Audio"
+                    width="800"
+                    height="570"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-card__category">Front-end</span>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__name">Landing Code Aw Audio</h3>
+                  <div class="project-card__desc">
+                    <p>
+                      CodeAwAudio is an immersive multi language landing web for audio plugins,
+                      developed with Astro, TypeScript, Preact, and CSS.
+                    </p>
+                    <p>
+                      Its main feature uses GSAP and ScrollTrigger to transform optimized videos
+                      into cinematic, frame-by-frame animations synchronized with scrolling. The
+                      platform also integrates Apache ECharts for interactive audio visualizations.
+                    </p>
+                  </div>
+                  <ul class="project-card__tags" aria-label="Technologies used in Project 05">
+                    <li>Astro</li>
+                    <li>Typescript</li>
+                    <li>GSAP</li>
+                    <li>Vite</li>
+                    <li>CSS</li>
+                  </ul>
+                  <a
+                    class="project-card__cta"
+                    href="https://codeawaudio.codeawapps.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>See project</span>
+
+                    <img
+                      src="assets/icons/web.webp"
+                      alt=""
+                      width="40"
+                      height="40"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="project-grid__item">
+              <article class="project-card">
+                <div class="project-card__media">
+                  <img
+                    class="project-card__img"
+                    src="assets/images/vk-tech.webp"
+                    alt="VK Tech"
+                    width="800"
+                    height="570"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-card__category">Tech Lead</span>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__name">VK Tech</h3>
+                  <div class="project-card__desc">
+                    <p>
+                      Affordable, professional landing pages for local businesses, startups, and
+                      entrepreneurs. Focused on modern UI/UX, accessibility, SEO, and responsive
+                      design.
+                    </p>
+                    <p>
+                      Frontend developed with JavaScript, CSS, and Tailwind CSS. Interactive 3D
+                      experiences with Three.js, GSAP animations, and smooth scrolling powered by
+                      Lenis.
+                    </p>
+                  </div>
+                  <ul class="project-card__tags" aria-label="Technologies used in Project 06">
+                    <li>HTML</li>
+                    <li>JS</li>
+                    <li>CSS</li>
+                    <li>Canvas</li>
+                    <li>ThreeJS</li>
+                  </ul>
+                  <a class="project-card__cta" href="project/vk-tech/index.html">
+                    <span>See project</span>
+
+                    <img
+                      src="assets/icons/see.webp"
+                      alt=""
+                      width="40"
+                      height="40"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="project-grid__item">
+              <article class="project-card">
+                <div class="project-card__media">
+                  <img
+                    class="project-card__img"
+                    src="assets/images/angular-game/angular-game_1.webp"
+                    alt="Angular Game"
+                    width="800"
+                    height="342"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-card__category">Full Stack</span>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__name">Angular Game</h3>
+                  <div class="project-card__desc">
+                    <p>
+                      An RTS (Real-Time Strategy) browser strategy game built with Angular and .NET.
+                    </p>
+                    <p>
+                      Front end build with TypeScript powered by NgRx Signals and RxJS for reactive
+                      state management.
+                    </p>
+                    <p>
+                      Backed by C# and ASP.NET Core, with multithreading and background processing.
+                    </p>
+                  </div>
+                  <ul class="project-card__tags" aria-label="Technologies used in Angular Game">
+                    <li>Angular</li>
+                    <li>RxJS</li>
+                    <li>Signals</li>
+                    <li>Biome</li>
+                    <li>.Net</li>
+                    <li>C#</li>
+                    <li>OAuth</li>
+                  </ul>
+                  <a class="project-card__cta" href="project/angular-game/index.html">
+                    <span>See project</span>
+
+                    <img
+                      src="assets/icons/see.webp"
+                      alt="See project icon"
+                      width="40"
+                      height="40"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="project-grid__item project-grid__item">
+              <article class="project-card">
+                <div class="project-card__media">
+                  <img
+                    class="project-card__img"
+                    src="assets/images/ts-wars.webp"
+                    alt="TS Wars"
+                    width="600"
+                    height="313"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-card__category">Full Stack</span>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__name">TS Wars</h3>
+                  <div class="project-card__desc">
+                    <p>
+                      A browser-based RTS built with TypeScript, HTML5 Canvas, and SCSS, without
+                      frontend frameworks or external game engines.
+                    </p>
+                    <p>
+                      Powered by a custom modular engine using OOP and asynchronous, event-driven
+                      interactions. Multiplayer support with Node.js, Express, and Socket.IO is
+                      planned. Under
+                    </p>
+                  </div>
+                  <ul class="project-card__tags" aria-label="Technologies used in Project 08">
+                    <li>TypeScript</li>
+                    <li>DOM</li>
+                    <li>Canvas</li>
+                    <li>ExpressJS</li>
+                    <li>Data Structure</li>
+                  </ul>
+                  <a
+                    class="project-card__cta"
+                    href="https://github.com/adrianrodriguezmontesinos/ts-wars"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>See project</span>
+
+                    <img
+                      src="assets/icons/github.webp"
+                      alt=""
+                      width="40"
+                      height="40"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- #endregion Projects -->
+
+      <!-- #region Academic -->
+      <section class="section academic" id="academic" aria-labelledby="academic-title">
+        <div class="container">
+          <header class="section-head">
+            <span class="ink ink-star" aria-hidden="true"></span>
+            <div class="section-head__art" aria-hidden="true">
+              <img
+                src="assets/images/studies.webp"
+                alt=""
+                width="350"
+                height="292"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="section-head__text">
+              <p class="eyebrow">Education</p>
+              <h2 class="section-title" id="academic-title">Academic Background</h2>
+              <p class="section-lead">
+                Formal engineering education combined with continuous, self-driven technical
+                training.
+              </p>
+            </div>
+          </header>
+
+          <!-- #region Studies -->
+          <h3 class="subsection-title" id="studies-sub">
+            <span class="subsection-title__index">01</span> Studies
+          </h3>
+
+          <ul class="studies" aria-labelledby="studies-sub">
+            <li class="study-card study-card--current">
+              <p class="study-card__status chip chip--current">Currently studying</p>
+              <h4 class="study-card__title">Software Engineering</h4>
+              <p class="study-card__institution">UOC — Universitat Oberta de Cataluña</p>
+            </li>
+            <li class="study-card">
+              <h4 class="study-card__title">FPII Multiplatform Application Development</h4>
+              <p class="study-card__institution">EDIX</p>
+            </li>
+            <li class="study-card">
+              <h4 class="study-card__title">Electronics and Communications Engineering</h4>
+              <p class="study-card__institution">UPM — Universidad Politécnica de Madrid</p>
+            </li>
+            <li class="study-card">
+              <h4 class="study-card__title">Frontend Development with HTML, CSS and JavaScript</h4>
+              <p class="study-card__institution">Miríadax &amp; UPM</p>
+            </li>
+            <li class="study-card">
+              <p class="study-card__status chip chip--certified">Certified</p>
+              <h4 class="study-card__title">Wearables &amp; Smart TV Development</h4>
+              <p class="study-card__institution">Samsung Tech Institute</p>
+            </li>
+            <li class="study-card">
+              <p class="study-card__status chip chip--certified">Certified</p>
+              <h4 class="study-card__title">Internet of Things (IoT)</h4>
+              <p class="study-card__institution">Samsung Tech Institute</p>
+            </li>
+          </ul>
+
+          <!-- #endregion Studies -->
+
+          <!-- #region Courses -->
+          <h3 class="subsection-title" id="courses-sub">
+            <span class="subsection-title__index">02</span> Courses &amp; Training
+          </h3>
+
+          <ol class="courses" aria-labelledby="courses-sub">
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">01</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/angular-fernando-herrera/"
+                  target="_blank"
+                >
+                  Angular de cero a experto
+                </a>
+                <p class="course-item__author">Fernando Herrera</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">02</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/angular-forms-course/"
+                  target="_blank"
+                >
+                  Angular Forms in Depth v22
+                </a>
+                <p class="course-item__author">Angular University</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">03</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/angular-signals/"
+                  target="_blank"
+                >
+                  Angular Signals in Depth v22
+                </a>
+                <p class="course-item__author">Angular University</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">04</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/solid-clean/"
+                  target="_blank"
+                >
+                  Principios SOLID y Clean Code
+                </a>
+                <p class="course-item__author">Fernando Herrera</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">05</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/advanced-css-and-sass/"
+                  target="_blank"
+                >
+                  Advanced CSS and SASS
+                </a>
+                <p class="course-item__author">Jonas Schmedtmann</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">06</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/ux-design-disenador-ux-de-cero-a-profesional-2021/"
+                  target="_blank"
+                >
+                  Diseño UX/UI Figma 2024
+                </a>
+                <p class="course-item__author">Javier Cañas</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">07</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/rxjs-de-cero-hasta-los-detalles/"
+                  target="_blank"
+                >
+                  RxJS Reactive
+                </a>
+                <p class="course-item__author">Fernando Herrera</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">08</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/redux-ngrx-angular/"
+                  target="_blank"
+                >
+                  Redux NgRx
+                </a>
+                <p class="course-item__author">Fernando Herrera</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">09</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/complete-agile-scrum-master-training-exam-simulator/"
+                  target="_blank"
+                >
+                  Complete Agile Scrum Management
+                </a>
+                <p class="course-item__author">Omni Academy</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">10</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/project-management-skills-math-concepts-you-should-know/"
+                  target="_blank"
+                >
+                  Zero to PMP: Master Project Management for PMP Certification
+                </a>
+                <p class="course-item__author">Sabri C. PMP</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">11</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/ngrx-course/"
+                  target="_blank"
+                >
+                  NgRx with NgRx Data
+                </a>
+                <p class="course-item__author">Angular University</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">12</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/microservicios-spring-boot-cloud-docker-profesional/"
+                  target="_blank"
+                >
+                  Microservicios Spring Boot
+                </a>
+                <p class="course-item__author">Carlos Adrián Soto Botero</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">13</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/master-microservices-with-spring-docker-kubernetes/"
+                  target="_blank"
+                >
+                  Microservicios Spring Boot Docker
+                </a>
+                <p class="course-item__author">Madan Reddy</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">14</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/event-driven-microservices-spring-boot-kafka-and-elasticsearch/"
+                  target="_blank"
+                >
+                  Event-Driven Microservices
+                </a>
+                <p class="course-item__author">Ali Gelenler</p>
+              </div>
+            </li>
+            <li class="course-item">
+              <span class="course-item__index" aria-hidden="true">15</span>
+              <div>
+                <a
+                  class="course-item__title"
+                  lang="es"
+                  href="https://www.udemy.com/course/claude-code-guia-completa/"
+                  target="_blank"
+                >
+                  Claude Code
+                </a>
+                <p class="course-item__author">Fernando Herrera</p>
+              </div>
+            </li>
+          </ol>
+          <!-- #endregion Courses -->
+        </div>
+      </section>
+
+      <!-- #endregion Academic -->
+
+      <!-- #region Skills -->
+      <section class="section skills" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <header class="section-head section-head--flip">
+            <span class="ink ink-branch" aria-hidden="true"></span>
+            <div class="section-head__art" aria-hidden="true">
+              <img
+                src="assets/images/skills.webp"
+                alt=""
+                width="350"
+                height="350"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="section-head__text">
+              <p class="eyebrow">Capabilities</p>
+              <h2 class="section-title" id="skills-title">Skills &amp; Capabilities</h2>
+              <p class="section-lead">
+                The technical toolbox on one side, the human toolbox on the other.
+              </p>
+            </div>
+          </header>
+
+          <!-- #region Hard skills -->
+          <h3 class="subsection-title" id="hard-skills-sub">
+            <span class="subsection-title__index">01</span> Hard Skills
+          </h3>
+
+          <ul class="hard-skills" aria-labelledby="hard-skills-sub">
+            <li class="skill-tile skill-tile--w2 skill-tile--under">
+              <span class="skill-tile__label">Project Management</span>
+            </li>
+            <li class="skill-tile skill-tile--feature">
+              <span class="skill-tile__label">Analysis &amp; Development</span>
+            </li>
+            <li class="skill-tile skill-tile--blob">
+              <span class="skill-tile__label">UI/UX &amp; Responsive Design</span>
+            </li>
+            <li class="skill-tile skill-tile--slide skill-tile--v2">
+              <span class="skill-tile__label">Usability, Accessibility &amp; SEO</span>
+            </li>
+            <li class="skill-tile skill-tile--tilt">
+              <span class="skill-tile__label">QA &amp; Testing</span>
+            </li>
+            <li class="skill-tile skill-tile--w2 skill-tile--accent">
+              <span class="skill-tile__label">Software Architecture</span>
+            </li>
+            <li class="skill-tile skill-tile--w2 skill-tile--bar">
+              <span class="skill-tile__label">REST APIs &amp; RESTful Services</span>
+            </li>
+            <li class="skill-tile skill-tile--frame">
+              <span class="skill-tile__label">Web Security</span>
+            </li>
+            <li class="skill-tile skill-tile--w2 skill-tile--dotsmove">
+              <span class="skill-tile__label">Data Structures &amp; Algorithms</span>
+            </li>
+            <li class="skill-tile skill-tile--w2 skill-tile--fade skill-tile--v3">
+              <span class="skill-tile__label">DevOps, CI/CD &amp; Agile Methodologies</span>
+            </li>
+            <li class="skill-tile skill-tile--spin">
+              <span class="skill-tile__label">Design Tools</span>
+            </li>
+            <li class="skill-tile skill-tile--pulse skill-tile--v5">
+              <span class="skill-tile__label">Electronics &amp; IoT</span>
+            </li>
+            <li class="skill-tile skill-tile--w2 skill-tile--trio">
+              <span class="skill-tile__label">Windows, macOS &amp; Linux/Unix</span>
+            </li>
+            <li class="skill-tile skill-tile--w2 skill-tile--spark skill-tile--v4">
+              <span class="skill-tile__label">AI Tools</span>
+            </li>
+          </ul>
+
+          <!-- #endregion Hard skills -->
+
+          <!-- #region Soft skills -->
+          <h3 class="subsection-title" id="soft-skills-sub">
+            <span class="subsection-title__index">02</span> Soft Skills
+          </h3>
+
+          <ul class="soft-skills" aria-labelledby="soft-skills-sub">
+            <li class="soft-card soft-card--accountability soft-card--wide">
+              <span class="soft-card__icon">
+                <img
+                  src="assets/icons/account.webp"
+                  alt=""
+                  width="150"
+                  height="150"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="soft-card__name">Accountability</span>
+            </li>
+            <li class="soft-card soft-card--communication soft-card--tall">
+              <span class="soft-card__icon">
+                <img
+                  src="assets/icons/communication.webp"
+                  alt=""
+                  alt=""
+                  width="150"
+                  height="150"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="soft-card__name">Effective Communication</span>
+            </li>
+            <li class="soft-card soft-card--creativity">
+              <span class="soft-card__icon">
+                <img
+                  src="assets/icons/creativity.webp"
+                  alt=""
+                  width="150"
+                  height="150"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="soft-card__name">Creativity</span>
+            </li>
+            <li class="soft-card soft-card--leadership soft-card--wide">
+              <span class="soft-card__icon">
+                <img
+                  src="assets/icons/leadership.webp"
+                  alt=""
+                  width="150"
+                  height="150"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="soft-card__name">Leadership</span>
+            </li>
+            <li class="soft-card soft-card--decision">
+              <span class="soft-card__icon">
+                <img
+                  src="assets/icons/decision.webp"
+                  alt=""
+                  width="150"
+                  height="150"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="soft-card__name">Decision Making</span>
+            </li>
+            <li class="soft-card soft-card--time">
+              <span class="soft-card__icon">
+                <img
+                  src="assets/icons/time.webp"
+                  alt=""
+                  width="150"
+                  height="150"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="soft-card__name">Time Management</span>
+            </li>
+            <li class="soft-card soft-card--solving">
+              <span class="soft-card__icon">
+                <img
+                  src="assets/icons/solving.webp"
+                  alt=""
+                  width="150"
+                  height="150"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="soft-card__name">Problem Solving</span>
+            </li>
+            <li class="soft-card soft-card--adaptability soft-card--wide">
+              <span class="soft-card__icon">
+                <img
+                  src="assets/icons/temperature.webp"
+                  alt=""
+                  width="150"
+                  height="150"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="soft-card__name">Adaptability</span>
+            </li>
+          </ul>
+          <!-- #endregion Soft skills -->
+        </div>
+      </section>
+
+      <!-- #endregion Skills -->
+
+      <!-- #region Closing -->
+      <section class="section closing" id="closing" aria-labelledby="closing-title">
+        <div class="container">
+          <div class="closing__panel">
+            <div class="closing__art" aria-hidden="true">
+              <img
+                src="assets/images/teaching.webp"
+                alt=""
+                width="350"
+                height="350"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="closing__text">
+              <p class="eyebrow">The purpose of this website</p>
+              <h2 class="closing__title" id="closing-title">
+                More than a CV. A little web laboratory.
+              </h2>
+              <p>
+                This website is more than a place to present my experience. It's also an ongoing
+                experiment in building beautiful, accessible and reusable interfaces using native
+                web technologies.
+              </p>
+              <p>
+                Every component, interaction and animation is an opportunity to explore what modern
+                HTML and CSS can achieve — and a building block for a future library of native
+                components for Astro.
+              </p>
+              <a
+                class="closing__cta"
+                href="architecture-diagram.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>See architecture</span>
+                <img src="assets/icons/see.webp" alt="" width="40" height="40" decoding="async" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- #endregion Closing -->
+
+      <!-- #region Blog -->
+      <section class="section blog" id="blog" aria-labelledby="blog-title">
+        <div class="container">
+          <div class="blog__panel">
+            <div class="blog__art">
+              <img
+                src="assets/images/blog.webp"
+                alt=""
+                width="250"
+                height="208"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="blog__text">
+              <p class="eyebrow">The blog</p>
+              <h2 class="blog__title" id="blog-title">Thoughts, Code &amp; Technology</h2>
+              <p>
+                Beyond building software, I enjoy exploring new technologies, experimenting with
+                modern web development, and sharing ideas about programming, software architecture,
+                frontend engineering, and everything happening in the tech world.
+              </p>
+              <p>
+                Visit my blog to discover articles, experiments, tutorials, and thoughts about
+                technology.
+              </p>
+              <a
+                class="blog__cta"
+                href="https://codeawapps.com/blog"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Explore my blog</span>
+                <img src="assets/icons/web.webp" alt="" width="40" height="40" decoding="async" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- #endregion Blog -->
+    </main>
+
+    <!-- #region CV modal -->
+    <dialog class="cv-modal" aria-labelledby="cv-modal-title">
+      <div class="cv-modal__panel">
+        <span class="ink ink-star" aria-hidden="true"></span>
+        <span class="ink ink-ring" aria-hidden="true"></span>
+        <button
+          class="cv-modal__close"
+          type="button"
+          aria-label="Close CV download dialog"
+          data-cv-close
+        >
+          <img src="assets/icons/close.webp" alt="Close button" width="50" height="50" />
+        </button>
+        <h2 class="cv-modal__title" id="cv-modal-title">Choose your CV format</h2>
+        <p class="cv-modal__desc">
+          Select the version that works best for you. Both contain my professional experience,
+          skills and background, presented for different reading needs.
+        </p>
+        <div class="cv-modal__options">
+          <a
+            class="cv-option"
+            href="assets/Adrian_Rodriguez_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Adrian-Rodriguez-CV.pdf"
+          >
+            <span class="cv-option__art">
+              <img
+                src="assets/images/developing.webp"
+                alt=""
+                width="450"
+                height="450"
+                decoding="async"
+              />
+            </span>
+            <span class="cv-option__name">Human CV</span>
+            <span class="cv-option__text"
+              >A visually designed CV, optimized for people and easy reading.</span
+            >
+            <span class="cv-option__action">Download Human CV</span>
+          </a>
+          <a
+            class="cv-option"
+            href="assets/Adrian_Rodriguez_CV_ATS.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Adrian-Rodriguez-CV-ATS.pdf"
+          >
+            <span class="cv-option__art">
+              <img
+                src="assets/images/robot.webp"
+                alt=""
+                width="250"
+                height="250"
+                decoding="async"
+              />
+            </span>
+            <span class="cv-option__name">Agent ATS CV</span>
+            <span class="cv-option__text"
+              >A structured CV designed for Applicant Tracking Systems and automated resume
+              parsing.</span
+            >
+            <span class="cv-option__action">Download Agent ATS CV</span>
+          </a>
+        </div>
+      </div>
+    </dialog>
+    <!-- #endregion CV modal -->
+
+    <!-- #region Footer -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__brand">
+          <strong>Adrián Rodríguez</strong>
+          <span>Software Developer &amp; Tech Lead</span>
+        </p>
+        <p class="site-footer__copy">Todos los derechos reservados.</p>
+        <a class="site-footer__top" href="#top"
+          >Back to top
+          <img src="assets/icons/up.webp" alt="" width="40" height="40" decoding="async" />
+        </a>
+      </div>
+    </footer>
+    <!-- #endregion Footer -->
+  </body>
+</html>
